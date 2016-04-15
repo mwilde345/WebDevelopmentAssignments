@@ -1,0 +1,63 @@
+<!Doctype HTML>
+<html>
+	<head>
+		<title>Picture</title>
+		<meta charset = "utf-8"/>
+		<script type = "text/javascript" src = "scripts/jquery-2.1.4.js"></script>
+		<script type = "text/javascript" src = "scripts/raphael-min.js"></script>
+
+	</head>
+
+	<body>
+		<div id = "paper" style = "background: red"></div>
+		<script>
+		var s = "";
+		var a = [],b = [];
+		var j = 0,x = 0,y =0;
+		var r = Raphael("paper",500,500);
+		for(var i = 0; i <= Math.PI; i+=(Math.PI/10)){
+			s = s+"<br> Sin of "+parseFloat(Math.round(i * 100) / 100).toFixed(3)+": "+ "<strong>"+
+			parseFloat(Math.round(Math.sin(i) * 100) / 100).toFixed(3)+"</strong>";
+
+			a[j] = Math.round(Math.sin(i) * 100) / 100;
+			b[j] = i;
+			j++;
+
+			
+			//curve = r.path("m 30 0 s 15 -50 30 0 ");
+		}
+		curve = r.path("M100 100 q "+b[5]*20+" "+a[5]*40+" "+b[10]*20+" 0"+" q "+(b[5]*20)+" "+(-a[5]*40)+" "+b[10]*20+" 0");
+		curve.attr({
+				gradient: "45-red-green",
+				fill: "lightgreen",
+				stroke: "orange",
+				"stroke-width":10,
+				
+				"stroke-linejoin:":"round",
+				"stroke-opacity":0.9
+				});
+		curve1 = r.path("m "+(100+b[5]*80)+" 100 q "+b[5]*20+" "+a[5]*40+" "+b[10]*20+" 0"+" q "+(b[5]*20)+" "+(-a[5]*40)+" "+b[10]*20+" 0");
+		curve1.attr({
+				gradient: "45-red-green",
+				fill: "lightgreen",
+				stroke: "orange",
+				"stroke-width":10,
+				
+				"stroke-linejoin:":"round",
+				"stroke-opacity":0.9
+				});
+		curve2 = r.path("m "+(100+b[5]*120)+" 100 q "+b[5]*20+" "+a[5]*40+" "+b[10]*20+" 0"+" q "+(b[5]*20)+" "+(-a[5]*40)+" "+b[10]*20+" 0");
+		curve2.attr({
+				gradient: "45-red-green",
+				fill: "lightgreen",
+				stroke: "orange",
+				"stroke-width":10,
+				
+				"stroke-linejoin:":"round",
+				"stroke-opacity":0.9
+				});
+		</script>
+
+	</body>
+
+</html>
