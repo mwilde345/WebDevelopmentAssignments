@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<meta charset = "utf-8">
+		<title>Matthew Wilde HTML5 Elements</title> 
+    		<style type="text/css">
+				html, body {
+					background: rgb(150, 182, 250);
+					font-family: Comic Sans;
+					font-size: 14px;
+					margin-left: 5%;
+					margin-right: 5%;
+					padding: 0;
+				}
+				table, th, td {
+					border: 2px solid red;
+					border-collapse: collapse;
+				}
+				th, td{
+					padding: 10px;
+				}
+				
+				mark{
+					background: black;
+					color: lightgreen;
+				}
+				
+				p.example {
+					font-family: "Lucidia Console",Lucidia,monospace;
+					font-style: italic;
+					font-size: 2.3em;
+					
+				}
+				
+				a.ex1:link, a.ex1:active, a.ex2:visited, a.ex3:visited { <!--options to change are link, visited, hover, and active. variables color, background-color, and text-decoration-->
+					color: white;
+					background-color: lightgrey;
+				}
+				a.ex1:visited, a.ex2:hover, a.ex3:active, a.ex2:active, a.ex3:hover {
+					font-family: "Times New Roman",Times,serif;
+					color: yellow;
+					background-color: black;
+					
+				}
+			</style>
+	</head>
+	
+	
+	
+	<body>
+		<h1> Week02.5 </h1>
+		<h3> Create a web page with these elements: </h3>
+		<ul>
+			<li><a href = "#videoAnchor">video</a></li>
+			<li><a href = "#formAnchor">form</a></li>
+			<li><a href = "#meterAnchor">meter</a></li>
+			<li><a href = "#paragraphAnchor">paragraphs</a></li>
+			<li><a href = "#characterAnchor">Character Entities of Textbook p. 48</a></li>
+		</ul>
+		<br>
+	
+		<hr>
+			<a name = "videoAnchor"></a>
+			<h3>Video Elements</h3>
+			<h4>Dry Ice Bubbles</h4>
+			<div>
+			<video src = "bubbles.mp4" alt = "Your browser doesn't support video playback of this file." controls = "controls" height = "600" width = "250"></video>
+			</div>
+		
+        <hr>
+			<a name = "formAnchor"></a>
+			<h3>Demonstrating Form Usage</h3>
+			<form>
+			<fieldset>
+			<legend>Used to collect user input</legend>
+			Text Input: 
+			<input type = "text" name = "textbox" value = "Type here">
+			<br>
+			Button Input: 
+			<input type = "button" name = "thebutton" value = "Last chance">
+			Submit Button:
+			<input type = "submit" name = "Submit form">
+			<br>
+			Radio Button Input: 
+			<input type = "radio" name = "First Chance" disabled>First Chance</input>
+			<br>
+			Drop Down Menu Input: 
+			<select name = "colors">
+				<option value = "green">Green</option>
+				<option value = "red">Red</option>
+				<option value = "orange" selected>Orange</option>
+				<option value = "purple">Purple</option>
+				<option value = "yellow">Yellow</option>
+			</select>
+			<br>
+			</fieldset>
+			<br>
+			Begin typing to show possible choices: 
+			<input list = "moods">
+			<datalist id = "moods">
+				<option value = "Happy">
+				<option value = "Perturbed">
+				<option value = "Extroverted">
+				<option value = "Sullen">
+			</datalist>
+			<br>
+			</form>
+			<form oninput = "answer.value = parseInt(a.value)*parseInt(b.value)">
+				Multiply by 1
+				<input type = "range" min = "1" max = "5575" id = "a" name = "a" value = "2">
+				Multiply by 5
+				<input type = "number" id = "b" name = "b" value = "20">
+				= 
+				<output name = "answer" for="a b"></output>
+				<br>
+			</form>
+		
+		
+		<hr>
+			<a name = "meterAnchor"></a>
+			<h3>Using a meter in HTML5</h3>
+			<form oninput = "answer.value = parseInt(b.value).toFixed(2)/parseInt(a.value).toFixed(2)">
+			
+				Divide by 1
+				<input type = "range" min = "1" max = "20" id = "a" name = "a" value = "2">
+				Divide by 20
+				<input type = "number" id = "b" name = "b" value = "20">
+				= 
+				<output name = "answer" for="a b"></output>
+				<br>
+			</form>
+			
+		<hr>
+			<a name = "paragraphAnchor"></a>
+			<h4>Paragraphs in HTML</h4>
+			<a name = "paragraphsAnchor"></a>
+			<h4>Display of Paragraphs</h4>
+				<p>This is a normal paragraph inside <xmp><p></p></xmp> tags.<br>
+				Oh soul,
+				you worry too much.
+				You have seen your own strength.
+				You have seen your own beauty.
+				You have seen your golden wings.
+				why do you worry?</p>
+				<p>This paragraph however is contained inside<xmp><pre></pre></xmp>tags. Preserving spacing and line breaks.<br>
+				<pre>
+				Oh soul,
+				you worry too much.
+				You have seen your own strength.
+				You have seen your own beauty.
+				You have seen your golden wings.
+				why do you worry?	
+				</pre>
+		
+		<hr>
+			<a name = "characterAnchor"></a>
+			<h4>How to use characters from textbook pg. 48</h4>
+			<pre>
+			Thank goodness &amp we have the ability &lt to
+			use certain &gt characters that &quot otherwise 
+			would interfere &apos with our &frac14 code. Our
+			code is most precious and &frac12 we must preserve
+			it's validity. &deg is a good sign. I like &nbsp the space
+			character too. &copy is applied to this code.
+			&#8364 500
+			</pre>
+		
+	</body>

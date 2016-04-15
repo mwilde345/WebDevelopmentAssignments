@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<meta charset = "utf-8">
+		<title>Matthew Wilde Week02 </title> 
+    		<style type="text/css">
+				html, body {
+					background: rgb(150, 182, 250);
+					font-family: Comic Sans;
+					font-size: 14px;
+					margin-left: 5%;
+					margin-right: 5%;
+					padding: 0;
+				}
+			</style>
+			<style>
+			table, th, td {
+				border: 2px solid red;
+				border-collapse: collapse;
+			}
+			th, td{
+				padding: 10px;
+			}
+			</style>
+	</head>
+
+	<body>
+		<hr>
+		
+			<a name = "cubeFunction"></a>
+			<h4>Cube Function</h4>
+				<p>Code output: </p>
+					<script type="text/javascript">
+
+						function range (start, end) {
+							var a = []; //without var then the definition of a will be global not local. ??
+							for (var i = start; i <= end; i++) {
+							a.push(i*i*i);
+							}
+							document.write(a+'<br>');
+						}
+
+						document.write('<strong>Cubes of 1 - 20:</strong> <br>');
+						range(1,20);
+						document.write('<strong>Cube function passed to an array:</strong><br>');
+						
+						function cubeIt(v){
+							var a = v;
+							return a*a*a;
+						}
+
+						
+						var b = [2,4,6,8,10,25,3,45,12];
+						document.write('Before: '+b+'<br>');
+						b = b.map(cubeIt);
+						document.write('After: '+b);
+					</script>
+		
+        <hr>
+	</body>
