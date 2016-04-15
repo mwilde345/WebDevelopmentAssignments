@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Week 06.3</title>
+		<meta charset="utf-8">
+		<script src = "scripts/jquery-2.1.4.js"></script>
+	</head>
+	<body>
+		<img src = "MyFace.png"/>
+		<div id = "buttons">
+			<button onclick = "method(0)">hide()</button>
+			<button onclick = "method(1)">show()</button>
+			<button onclick = "method(2)">fadeIn()</button>
+			<button onclick = "method(3)">fadeOut()</button>
+			<button onclick = "method(4)">slideDown()</button>
+			<button onclick = "method(5)">slideUp()</button>
+			<button onclick = "method(6)">animate()</button>
+		</div>
+
+		<script>
+			function method(n){
+				switch(n){
+					case 0: $("img").hide(); break;
+					case 1: $("img").show(); break;
+					case 2: $("img").fadeIn(2000);break;
+					case 3: $("img").fadeOut(2000);break;
+					case 4: $("img").slideUp(1000);break;
+					case 5: $("img").slideDown(1000);break;
+					case 6: {$("img").animate({
+						width: '+=100px',
+						left: '+=100px',
+					},2000);
+					$("img").animate({
+						height: '+=100px',
+						top: '+=100px',
+					},2000); 
+						break;
+					}
+				}
+
+			};
+
+		</script>
+	</body>
+</html>
