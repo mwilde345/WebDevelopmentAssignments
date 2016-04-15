@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Week 09.2</title>
+		<meta charset="utf-8">
+		<script src = "scripts/jquery-2.1.4.js"></script>
+	</head>
+	<body>
+		<h1>Click and drag to select multiple items</h1>
+		
+
+
+		<form method = "post" action = "php03.php">
+			<select name="mylist[]" size = "5" style = "width:100px; height:100px;" multiple>
+			    <option>text1</option>
+			    <option>text2</option>
+			    <option>text3</option>
+			    <option>text4</option>
+			    <option>text5</option>
+	 		</select>
+		<input type = "submit" value = "Send it off">
+		</form>
+		<form method = "post" action = "php02.php">
+			<input name = "cb1" type = "checkbox" value = "Yes">
+				Yes
+			<input name = "cb2" type = "checkbox" value = "No">
+				No
+									
+		</form>
+
+	</body>
+</html>
