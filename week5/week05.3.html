@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Week 5.3</title>
+		<meta charset = "utf-8"/>
+		<script type = "text/javascript" src = "jquery-2.1.4.js"></script>
+	</head>
+
+	<body>
+		<div id = "center" style = "margins:auto; background-color:lightred;">
+			<input type = "text" width = "20" value = "Highlight me" onselect = "main()" align = "center"></input>
+			<input type = "text" width = "20" value = "Type Here" onkeypress = "kpress()" align = "center"></input>
+			<div id = "squareHere"> Try it: click it, hover over it, double click, and type something!</div>
+		</div>
+
+	
+		<script type = "text/javascript">
+				function main(){
+					$("#squareHere").attr({
+						"style": "width:300px;height:200px; color:yellow; background-color: grey; font-size: 20px; text-align: center;",
+						"ondblclick" : "double();",
+						"onmouseover" : "mover();",						
+						"onmousedown" : "coord(event);"
+					});
+				};
+				function double(){
+					$("#squareHere").css("background-color","red");
+					$("#squareHere").html("Double Clicked");
+				};
+				function mover(){
+					$("#squareHere").css("background-color","blue");
+					$("#squareHere").html("Mouseover!");
+				};
+				function kpress(){
+					$("#squareHere").css("background-color","orange");
+					$("#squareHere").html("Key Pressed");
+				};
+				function coord(event){
+					var x = event.screenX;
+					var y = event.screenY;
+					$("#squareHere").html("You clicked here: X: "+x+" Y: "+y);
+				};
+		</script>
+		
+
+		
+	</body>
+
+</html>
